@@ -17,6 +17,9 @@ session_start();
                 <a href="login.php" style="color: white; text-decoration: none; margin-right: 15px;">Zaloguj</a>
                 <a href="register.php" style="color: white; text-decoration: none;">Zarejestruj</a>
             <?php endif; ?>
+            <?php if (isset($_SESSION['user_role']) && $_SESSION['user_role'] === 'admin'): ?>
+            <a href="admin_panel.php" style="color: white; text-decoration: none; margin-left: 15px;">Panel Administracyjny</a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
